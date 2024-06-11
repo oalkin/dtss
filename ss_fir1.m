@@ -65,5 +65,5 @@ function hd = Type34Hilbert(N,n)
   % Type-III or type-IV Hilbert transformer ideal impulse response
   M = (N-1)/2;
   K = n-M;
-  hd = pi/2*K.*sinc(K/2).*sinc(K/2);         % Eqn. (/*\matexfileeqn{\ref{eq:fourdes29}}*/)
+  hd = pi/2*K.*sinc(K/2).*sinc(K/2);
 end

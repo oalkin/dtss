@@ -1,11 +1,4 @@
 % Script: mexdt_1_12b.m
-%---------------------------------------------------------------------
-% WARNING: Online version of MATLAB does not support the 
-% 'audioDeviceWriter' object used for frame-by-frame playback.
-% Consequently, this script can only be executed on a local
-% installation of MATLAB. For the online version of MATLAB, use
-% the alternate script 'mex_1_12b_Alt.m' instead.
-%---------------------------------------------------------------------
 sheetMusic = {
   "F4",  1.5, 1;
   "rest",0.5, 1;
@@ -32,10 +25,12 @@ sheetMusic = {
   "rest",2,   1  }
 
 sSource = audioSynthesizer('Notes',sheetMusic,'BeatsPerMin',100);
-sPlayer = audioDeviceWriter('SampleRate',sSource.SampleRate);
+sWriter = dsp.AudioFileWriter('Output sound.flac');
+sWriter.SampleRate = sSource.SampleRate;
+sWriter.FileFormat = 'FLAC';
  
 while ~isDone(sSource)  % Loop through until done:
   x = step(sSource);    %   Get the next frame of data from synthesizer
-  sPlayer(x);           %   Play back the frame
+  sWriter(x);           %   Write frame into file
 end
-release(sPlayer);
+release(sWriter);

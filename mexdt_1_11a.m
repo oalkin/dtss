@@ -1,6 +1,6 @@
 % Script: mexdt_1_11a.m
 % Create an "audio file reader" object
-sReader = dsp.AudioFileReader('Ballad_22050_Hz.mp3');
+sReader = dsp.AudioFileReader('Ballad_22050_Hz.flac');
 % Get and display some information about the audio file.
 fileName = sReader.Filename           % Name for the audio file
 sampleRate = sReader.SampleRate       % Sampling rate of the audio file

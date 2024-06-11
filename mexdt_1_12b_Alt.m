@@ -1,4 +1,4 @@
-% Script: mexdt_1_12b.m
+% Script: mexdt_1_12b_Alt.m
 sheetMusic = {
   "F4",  1.5, 1;
   "rest",0.5, 1;
@@ -25,7 +25,7 @@ sheetMusic = {
   "rest",2,   1  }
 
 sSource = audioSynthesizer('Notes',sheetMusic,'BeatsPerMin',100);
-sWriter = dsp.AudioFileWriter('Output sound.flac');
+sWriter = dsp.AudioFileWriter('Output_sound.flac');
 sWriter.SampleRate = sSource.SampleRate;
 sWriter.FileFormat = 'FLAC';
  
@@ -34,3 +34,5 @@ while ~isDone(sSource)  % Loop through until done:
   sWriter(x);           %   Write frame into file
 end
 release(sWriter);
+[data,fs] = audioread("Output_sound.flac");
+sound(data,fs);

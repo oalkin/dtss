@@ -1,6 +1,6 @@
-% Script: mexdt_1_12c.m
+% Script: mexdt_1_12c_Alt.m
 sSource = audioSynthesizer('BeatsPerMin',100,'SignalType','Square');
-sWriter = dsp.AudioFileWriter('Output sound.flac');
+sWriter = dsp.AudioFileWriter('Output_sound.flac');
 sWriter.SampleRate = sSource.SampleRate;
 sWriter.FileFormat = 'FLAC';
  
@@ -26,6 +26,8 @@ while ~isDone(sSource)           % Loop through until done:
   sWriter(x);                    %   Write frame into file
 end
 release(sWriter);
+[data,fs] = audioread("Output_sound.flac");
+sound(data,fs);
 
 function x = mysignal(ampl,freq,t)
   % Mix sinusoid and square wave

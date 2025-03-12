@@ -2,12 +2,12 @@
 n = [0:49];   % Vector of sample indices
 % First, set alpha=0.1 and compute the constant "c" for it
 alpha1 = 0.1;           
-c1 = 2*(1-alpha1);  % y[-1] = 2
+c1 = 2*(1-alpha1);   % y[-1] = 2
 % Compute the natural response.
 yh1 = c1*(1-alpha1).^n;
 % Next try with alpha=0.2
 alpha2 = 0.2;          
-c2 = 2*(1-alpha2);  % y[-1] = 2
+c2 = 2*(1-alpha2);   % y[-1] = 2
 % Compute the natural response.
 yh2 = c2*(1-alpha2).^n;
 % Graph the natural responses found

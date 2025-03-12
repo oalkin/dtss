@@ -1,11 +1,4 @@
 % Script: mexdt_2_13b.m
-%---------------------------------------------------------------------
-% WARNING: Online version of MATLAB does not support the 
-% 'audioDeviceWriter' object used for frame-by-frame playback.
-% Consequently, this script can only be executed on a local
-% installation of MATLAB. For the online version of MATLAB, use
-% the alternate script 'mex_2_13b_Alt.m' instead.
-%---------------------------------------------------------------------
 % Create an "audio file reader" object
 sReader = dsp.AudioFileReader('AG_Duet_22050_Hz.flac','ReadRange',[1,661500]);
 % Create an "audio player" object
@@ -18,7 +11,7 @@ buffer = zeros(L,numChannels);          % Initial buffer matrix
 while ~isDone(sReader)                  % Repeat until no more frames left
   x = sReader();                        %   Get the next frame of data 
   [y,buffer] = ss_echof(x,r,buffer);    %   Compute output frame with echo
-  sPlayer(x);                           %   Play back the frame
+  sPlayer(y);                           %   Play back the frame
 end
 
 release(sReader);  % We are finished with the input audio file

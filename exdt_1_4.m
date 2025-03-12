@@ -1,4 +1,4 @@
-%Script: exdt_1_4.m
+% Script: exdt_1_4.m
 n = [-5:10];
 g = x(n)+0.5*x(n-4);
 stem(n,g); grid;

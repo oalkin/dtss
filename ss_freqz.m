@@ -7,14 +7,14 @@ function [mag,phs] = ss_freqz(zrs,pls,gain,Omega)
   phs = zeros(1,nOmg);
   if nz>0
     for n = 1:nz
-      mag = mag.*abs(z-zrs(n));   % See Eqn. (/*\mexfiledteqn{\ref{eq:ztSys56}}*/)
-      phs = phs+angle(z-zrs(n));  % See Eqn. (/*\mexfiledteqn{\ref{eq:ztSys57}}*/)
+      mag = mag.*abs(z-zrs(n));   % See Eqn. (5.175)
+      phs = phs+angle(z-zrs(n));  % See Eqn. (5.176)
     end  
   end  
   if np>0
     for n = 1:np
-      mag = mag./abs(z-pls(n));   % See Eqn. (/*\mexfiledteqn{\ref{eq:ztSys56}}*/)
-      phs = phs-angle(z-pls(n));  % See Eqn. (/*\mexfiledteqn{\ref{eq:ztSys57}}*/)
+      mag = mag./abs(z-pls(n));   % See Eqn. (5.175)
+      phs = phs-angle(z-pls(n));  % See Eqn. (5.176)
     end 
   end   
   mag = mag*gain;

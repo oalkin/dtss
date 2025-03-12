@@ -6,4 +6,3 @@ function [x] = ss_longdiv(num,den,n)
     x = [x,q];
   end
 end
-

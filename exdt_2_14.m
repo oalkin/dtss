@@ -1,6 +1,6 @@
 % Script exdt_2_14.m
-alpha = 0.1;  % alpha for the exponential smoother
-n = [0:49];   % Vector of sample indices
+alpha = 0.1;   % 'alpha' for the exponential smoother
+n = [0:49];    % Vector of sample indices
 % Compute the forced response for y[-1]=2.5
 y = 1.5*((1-alpha).^(n+1))+1;
 % Graph the forced response

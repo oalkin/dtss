@@ -5,8 +5,8 @@ function [y,buffer] = ss_resf(x,Omg0,r,gain,buffer)
   a2 = r*r;
   for i=1:frameSize
     % Scalar w below is w[n] in Fig. /*\matexfileeqn{\ref{fig:resbp6}}*/ 
-    w = x(i,:)-a1*buffer(1,:)-a2*buffer(2,:);  % Eqn. (/*\matexfileeqn{\ref{eq:1014a}}*/)
-    y(i,:) = (w-buffer(2,:))*gain;             % Eqn. (/*\matexfileeqn{\ref{eq:1014b}}*/)
+    w = x(i,:)-a1*buffer(1,:)-a2*buffer(2,:);  % Eqn. (8.195)
+    y(i,:) = (w-buffer(2,:))*gain;             % Eqn. (8.196)
     buffer = [w;buffer(1,:)];                  % Update buffer  
   end
 end

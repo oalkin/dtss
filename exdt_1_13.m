@@ -1,9 +1,9 @@
 % Script: exdt_1_13.m
-n = [0:34];                % Create a vector of indices.
-x1 = 2*cos(0.4*pi*n);      % First sinusoid.
-x2 = 1.5*sin(0.48*pi*n);   % Second sinusoid.
-x = x1+x2;                 % Add the two components.
-% Graph the results.
+n = [0:34];                % Create a vector of indices
+x1 = 2*cos(0.4*pi*n);      % First sinusoid
+x2 = 1.5*sin(0.48*pi*n);   % Second sinusoid
+x = x1+x2;                 % Add the two components
+% Graph the results
 tiledlayout(3,1);
 nexttile;
 stem(n,x1); grid;

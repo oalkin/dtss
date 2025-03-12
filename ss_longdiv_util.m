@@ -10,4 +10,3 @@ function [q,r] = ss_longdiv_util(num,den)
   [q,r] = deconv(num,den);   % Find quotient and remainder
   r = r(2:length(r));        % Drop first element of remainder which is 0
 end
-

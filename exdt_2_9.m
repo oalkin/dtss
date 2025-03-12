@@ -1,7 +1,6 @@
 % Script exdt_2_9.m
-% Set the parameter 'A'
-A = 10;
-% Set y=1 and iterate through the difference equation
+A = 10;    % Set the parameter 'A'
+% Start with y=1 and iterate through the difference equation
 y = 1;
 y = 0.5*(y+A/y)
 % Second iteration.

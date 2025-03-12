@@ -13,7 +13,7 @@ function h = ss_firls(N,F,A,K,weights)
   A = W*A;                  % Modify matrix A
   Pk = W*Pk;                % Modify vector Pk
   h = A\Pk;                 % Least-squares solution
-  h = [h;h(end-1:-1:1)];    % Eqn. (/*\matexfileeqn{\ref{eq:leastsq1}}*/)
+  h = [h;h(end-1:-1:1)];    % Eqn. (8.182)
 end
 
 function A = Type1CoeffMatrix(M,Omg)
@@ -28,5 +28,5 @@ end
 function Ak = Type1CoeffVector(M,Omgk)
 % Local function to build one row of the coefficient matrix
   n = [0:M-1];
-  Ak = [2*cos(Omgk*(n-M)),1];          % Eqn. (/*\matexfileeqn{\ref{eq:leastsq3}}*/)
+  Ak = [2*cos(Omgk*(n-M)),1];          % Eqn. (8.184)
 end

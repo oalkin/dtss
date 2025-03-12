@@ -1,3 +1,4 @@
+% WaveEqnPart2.m
 % Script to graph a solution y(x,t) of the wave equation for a string 
 % with both ends fixed.
 % See MATLAB Exercise 8.16: Case Study - Plucked string filter

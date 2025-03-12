@@ -3,7 +3,7 @@ function c = ss_efsapprox(x,k)
   Nk = length(k);  % Size of vector 'k'
   % Create a return vector same size as 'k'
   c = zeros(1,Nk);
-  Xk = fft(x)/Nx;  % Eqn. (/*\matexfileeqn{\ref{eq:ApproxEFS7}}*/)
+  Xk = fft(x)/Nx;  % Eqn. (7.35)
   % Copy the coefficients requested
   for i = 1:Nk
     kk = k(i);

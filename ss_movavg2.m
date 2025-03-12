@@ -3,6 +3,6 @@ function y = ss_movavg2(x)
   if isempty(xnm1)   % If the function is called for the first time
     xnm1 = 0;        %   Initialize xnm1
   end;  
-  y = (x+xnm1)/2;    % Eqn. (/*\matexfileeqn{\ref{eq:ex0222a}}*/)
+  y = (x+xnm1)/2;    % Eqn. (2.9)
   xnm1 = x;          % Bookkeeping to prepare for next call
 end

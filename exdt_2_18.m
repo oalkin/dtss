@@ -1,6 +1,6 @@
 % Script: exdt_2_18.m
-alpha = 0.1;   % Parameter for exponential smoother
-n = [-10:49];  % Vector of sample indices
+alpha = 0.1;    % Parameter for exponential smoother
+n = [-10:49];   % Vector of sample indices
 % Compute the impulse response
 h = alpha*(1-alpha).^n.*(n>=0);   % See Example 2.18
 % Graph the impulse response

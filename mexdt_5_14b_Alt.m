@@ -36,4 +36,4 @@ while ~isDone(sReader)
   sWriter(y);                             % Write frame to file  
 end
 release(sReader);  % We are finished with the input audio file
-release(sWriter);  % Release audio writer object
+release(sWriter);  % Release audio file writer object

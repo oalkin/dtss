@@ -1,10 +1,4 @@
 % Script: mexdt_1_11d.m
-%---------------------------------------------------------------------
-% WARNING: Online version of MATLAB does not support the 
-% 'audioDeviceWriter' object used for frame-by-frame playback.
-% Consequently, this script can only be executed on a local
-% installation of MATLAB.
-%---------------------------------------------------------------------
 % Create an "audio file reader" object
 sReader = dsp.AudioFileReader('Ballad_22050_Hz.flac');
 sReader.ReadRange = [1,441000];
@@ -14,7 +8,7 @@ sPlayer = audioDeviceWriter('SampleRate',sReader.SampleRate);
 % Prepare the average power plot 
 figure;
 hPlot = stem([0,0],'diamondr','linewidth',3);
-axis([0.5,2.5,0,0.1]);
+axis([0.5,2.5,0,0.01]);
 ylabel('Normalized average power');
 xlabel('Channel');
 set(gca,'XTick',[1,2])

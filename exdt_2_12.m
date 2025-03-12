@@ -1,5 +1,5 @@
 % Script: exdt_2_12.m
-n = [0:49];  % Vector of sample indices
+n = [0:49];    % Vector of sample indices
 % Compute the natural solution for y[-1]=19 and y[-2]=53
 yh = 2*(0.5).^n+5*(1/3).^n;
 % *Graph the natural response

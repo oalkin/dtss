@@ -4,4 +4,3 @@ function xtilde = ss_dper(x,n)
   nn = nmod+1;         % MATLAB indices start with 1
   xtilde = x(nn);      % Return periodic signal
 end
-

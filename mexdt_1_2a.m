@@ -1,4 +1,4 @@
-%Script: mexdt_1_2a.m
+% Script: mexdt_1_2a.m
 n = [-10:49];
 w1 = (n>=0 & n<=7);
 w2 = (n>7);

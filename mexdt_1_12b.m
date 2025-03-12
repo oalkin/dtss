@@ -1,11 +1,4 @@
 % Script: mexdt_1_12b.m
-%---------------------------------------------------------------------
-% WARNING: Online version of MATLAB does not support the 
-% 'audioDeviceWriter' object used for frame-by-frame playback.
-% Consequently, this script can only be executed on a local
-% installation of MATLAB. For the online version of MATLAB, use
-% the alternate script 'mex_1_12b_Alt.m' instead.
-%---------------------------------------------------------------------
 sheetMusic = {
   "F4",  1.5, 1;
   "rest",0.5, 1;

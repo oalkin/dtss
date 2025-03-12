@@ -4,5 +4,5 @@ function y = ss_movavg(x,N)
     buffer = zeros(N,1);  %   Initialize buffer
   end;
   buffer = [x;buffer(1:end-1)];  % Update buffer with new incoming sample
-  y = sum(buffer)/N;      % Eqn. (/*\matexfileeqn{\ref{eq:ex0221b}}*/)
+  y = sum(buffer)/N;      % Eqn. (2.8)
 end

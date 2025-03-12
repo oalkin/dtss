@@ -1,9 +1,7 @@
-function y = ss_conv(x,h)
-  N1 = length(x);  % Length of signal 'x'
-  N2 = length(h);  % Length of signal 'h'
-  N = N1+N2-1;     % Length of linear convolution result
-  Xk = fft(x,N);   % DFT of x[n] zero padded to N
-  Hk = fft(h,N);   % DFT of h[n] zero padded to N
-  Yk = Xk.*Hk;     % Multiply two DFT's
-  y = ifft(Yk,N);  % Compute inverse DFT
+function [y,n] = ss_conv(h,x,Nh,Nx)
+  y = conv(h,x);        % Compute the convolution
+  Ny = length(y);       % Number of samples in y[n]
+  nFirst = Nh+Nx;       % Correct index for the first sample in y[n]
+  nLast = nFirst+Ny-1;  % Correct index for the last sample in y[n]
+  n = [nFirst:nLast];   % Vector of corrected indices
 end

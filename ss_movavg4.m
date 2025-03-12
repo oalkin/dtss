@@ -5,7 +5,7 @@ function y = ss_movavg4(x)
     xnm2 = 0;         %   Initialize xnm2
     xnm3 = 0;         %   Initialize xnm3
   end;  
-  y = (x+xnm1+xnm2+xnm3)/4;   % Eqn. (/*\matexfileeqn{\ref{eq:ex0223a}}*/)
+  y = (x+xnm1+xnm2+xnm3)/4;   % Eqn. (2.10)
   % Bookkeeping to prepare for next call
   xnm3 = xnm2;      
   xnm2 = xnm1;

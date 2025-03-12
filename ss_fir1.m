@@ -32,38 +32,38 @@ function hd = Type12LP(Omgc,N,n)
   % Type-I or type-II lowpass ideal impulse response
   M = (N-1)/2;
   K = n-M;
-  hd = Omgc/pi*sinc(Omgc/pi*K);  % Eqn. (/*\matexfileeqn{\ref{eq:fourdes9}}*/)
+  hd = Omgc/pi*sinc(Omgc/pi*K);  % Eqn. (8.152)
 end
 
 function hd = Type12HP(Omgc,N,n)
   % Type-I or type-II highpass ideal impulse response
   M = (N-1)/2;
   K = n-M;
-  hd = sinc(K)-Type12LP(Omgc,N,n);  % Eqn. (/*\matexfileeqn{\ref{eq:fourdes11}}*/)
+  hd = sinc(K)-Type12LP(Omgc,N,n);  % Eqn. (8.154)
 end
 
 function hd = Type12BP(Omg1,Omg2,N,n)
   % Type-I or type-II bandpass ideal impulse response
   M = (N-1)/2;
-  hd = Type12LP(Omg2,N,n)-Type12LP(Omg1,N,n);  % Eqn. (/*\matexfileeqn{\ref{eq:fourdes13}}*/)
+  hd = Type12LP(Omg2,N,n)-Type12LP(Omg1,N,n);  % Eqn. (8.156)
 end
 
 function hd = Type12BS(Omg1,Omg2,N,n)
   % Type-I or type-II bandstop ideal impulse response
   M = (N-1)/2;
-  hd = Type12LP(Omg1,N,n)+Type12HP(Omg2,N,n);  % Eqn. (/*\matexfileeqn{\ref{eq:fourdes14}}*/)
+  hd = Type12LP(Omg1,N,n)+Type12HP(Omg2,N,n);  % Eqn. (8.157)
 end
 
 function hd = Type34Diff(N,n)
   % Type-III or type-IV differentiator ideal impulse response
   M = (N-1)/2;
   K = n-M+eps;  % Avoid division by zero
-  hd = cos(pi*K)./K-1/pi*sin(pi*K)./(K.*K);  % Eqn. (/*\matexfileeqn{\ref{eq:fourdes24}}*/)
+  hd = cos(pi*K)./K-1/pi*sin(pi*K)./(K.*K);  % Eqn. (8.164)
 end
 
 function hd = Type34Hilbert(N,n)
   % Type-III or type-IV Hilbert transformer ideal impulse response
   M = (N-1)/2;
   K = n-M;
-  hd = pi/2*K.*sinc(K/2).*sinc(K/2);
+  hd = pi/2*K.*sinc(K/2).*sinc(K/2);         % Eqn. (8.169)
 end

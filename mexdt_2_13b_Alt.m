@@ -13,7 +13,7 @@ buffer = zeros(L,numChannels);          % Initial buffer matrix
 while ~isDone(sReader)                  % Repeat until no more frames left
   x = sReader();                        %   Get the next frame of data 
   [y,buffer] = ss_echof(x,r,buffer);    %   Compute output frame with echo
-  sWriter(x);                           %   Write frame into file
+  sWriter(y);                           %   Write frame into file
 end
 
 release(sReader);  % We are finished with the input audio file

@@ -1,10 +1,4 @@
 % Script: mexdt_1_11c.m
-%---------------------------------------------------------------------
-% WARNING: Online version of MATLAB does not support the 
-% 'audioDeviceWriter' object used for frame-by-frame playback.
-% Consequently, this script can only be executed on a local
-% installation of MATLAB.
-%---------------------------------------------------------------------
 % Create an "audio file reader" object
 sReader = dsp.AudioFileReader('Ballad_22050_Hz.flac');
 sReader.ReadRange = [1,441000];   % Read 20 seconds of music

@@ -6,7 +6,7 @@ function c = ss_dtfs(x,idx)
     tmp = 0;              % Reset running sum
     for nn = 1:length(x)
       n = nn-1;           % MATLAB array indices start with 1
-      tmp = tmp+x(nn)*exp(-j*2*pi/N*k*n);  % Eqn. (/*\mexfiledteqn{\ref{eq:fdpDTFS17}}*/)
+      tmp = tmp+x(nn)*exp(-j*2*pi/N*k*n);  % Eqn. (3.19)
     end
     c(kk) = tmp/N;
   end  

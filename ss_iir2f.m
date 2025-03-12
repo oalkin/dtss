@@ -1,6 +1,6 @@
 function [out,states] = ss_iir2f(inp,coeffs,states)
   out = zeros(size(inp));     % Placeholder for output frame 
-  frameSize = size(inp,1);  % Number of samples in each frame
+  frameSize = size(inp,1);    % Number of samples in each frame
   % Extract the filter states
   r1 = states(1,:);
   r2 = states(2,:);

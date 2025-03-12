@@ -1,4 +1,4 @@
-%Script: exdt_1_5.m
+% Script: exdt_1_5.m
 n = [-5:5];
 g = x(2*n);
 stem(n,g);
